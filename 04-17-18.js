@@ -12,4 +12,3 @@
  * Result: Nothing is returned, but new linked list is a -> b -> d -> e
  *
 */
-
