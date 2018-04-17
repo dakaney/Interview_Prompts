@@ -13,3 +13,35 @@
  *
 */
 
+// i: target node from a singly Linked List
+// o: nothing returned, but linked list has deleted the target node
+// c: nothing
+// e: nothing passed in?
+
+const deleteMiddleNode = (node) => {
+  let currentNode = node;
+  
+  while (currentNode) {
+    currentNode.val = currentNode.next.val;
+    if (!currentNode.next.next) {
+      currentNode.next = null
+    }
+    currentNode = currentNode.next;
+  }
+  return undefined;
+};
+
+function ListNode(val) {
+  this.val = val;
+  this.next = null;
+}
+
+var head1 = new ListNode(1);
+var tail1 = new ListNode(2);
+var tail2 = new ListNode(3);
+var tail3 = new ListNode(4);
+var tail4 = new ListNode(5);
+head1.next = tail1;
+tail1.next = tail2;
+tail2.next = tail3;
+tail3.next = tail4;
