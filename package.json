@@ -1,0 +1,19 @@
+{
+  "name": "interview_prompts",
+  "version": "1.0.0",
+  "description": "Practice problems from cracking the coding interview",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rektator-bot/Interview_Prompts.git"
+  },
+  "author": "Sara Brandes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rektator-bot/Interview_Prompts/issues"
+  },
+  "homepage": "https://github.com/rektator-bot/Interview_Prompts#readme"
+}
