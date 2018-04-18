@@ -12,7 +12,6 @@
  * Result: Nothing is returned, but new linked list is a -> b -> d -> e
  *
 */
-
 // i: target node from a singly Linked List
 // o: nothing returned, but linked list has deleted the target node
 // c: nothing
