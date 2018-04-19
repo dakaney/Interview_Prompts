@@ -17,3 +17,43 @@ Output: 9 -> 1 -> 2. That is 912.
 
 Hints #7, #30, #71, #95, #109
 */
+
+
+let linkedListSum = (linkedListA , linkedListB) => {
+    let storageA = [];
+    let storageB = [];
+    let search = (node, storage) => {
+        storage.unshift(node.value);
+        if(node.next) {
+            search(node.next, storage);
+        }
+    }
+    search(linkedListA.head, storageA);
+    search(linkedListB.head, storageB);
+    return JSON.parse(storageA.join('')) + JSON.parse(storageB.join(''));
+}
+
+var LinkedList = function() {
+  this.tail = null;
+  this.head = null;
+};
+
+LinkedList.prototype.addToTail = function(value) {
+  const node = new this.makeNode(value);
+  if(this.head === null) {
+    this.head = node;
+    this.tail = node;
+  } else {
+    this.tail.next = node;
+    this.tail = node;      
+  }
+};
+
+LinkedList.prototype.makeNode = function(value) {
+  var node = {};
+
+  node.value = value;
+  node.next = null;
+
+  return node;
+};
