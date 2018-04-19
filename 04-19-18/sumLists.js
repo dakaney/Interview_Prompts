@@ -18,7 +18,6 @@ Output: 9 -> 1 -> 2. That is 912.
 Hints #7, #30, #71, #95, #109
 */
 
-
 let linkedListSum = (linkedListA , linkedListB) => {
     let storageA = [];
     let storageB = [];
@@ -30,7 +29,10 @@ let linkedListSum = (linkedListA , linkedListB) => {
     }
     search(linkedListA.head, storageA);
     search(linkedListB.head, storageB);
-    return JSON.parse(storageA.join('')) + JSON.parse(storageB.join(''));
+    let sum = JSON.parse(storageA.join('')) + JSON.parse(storageB.join(''));
+    let result = new LinkedList;
+    JSON.stringify(sum).split('').forEach(item => result.addToTail(item));
+    return result;
 }
 
 var LinkedList = function() {
